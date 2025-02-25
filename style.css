@@ -1,0 +1,548 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-top: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+     /* Prevent content from being hidden behind fixed header */
+}
+
+/* Header Styling */
+header {
+    background-color: #080a0b;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo and Title Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 100px; /* Ensuring logo size */
+    margin-right: 10px;
+    max-width: 100px; /* Adding some space between logo and title */
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Navigation Styling */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    font-style: normal;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #e14a0f; /* Emerald Green */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* JavaScript for Active Link */
+/* <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    });
+</script> */
+
+/* Responsive design: Stack the logo, h1, and nav on smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center; /* Center-align content on small screens */
+    }
+
+    nav {
+        margin-top: 1rem; /* Add space between h1 and nav */
+        justify-content: center; /* Center nav items */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 1rem; /* Space between nav items */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove left margin for vertical stack */
+        margin-bottom: 1rem; /* Space between nav items */
+    }
+}
+
+
+
+
+
+/* Home Page Video Section */
+.home-video {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.home-video video {
+    max-width: 100%; /* Full width but still responsive */
+    height: 450px; /* Bigger height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 12px;
+}
+.home-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-top: 1%;
+    
+}
+img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+.home-text-heading{
+    text-align: center;
+}
+
+.home-text-heading{
+    text-align: center;
+}
+#matchmaking {
+    padding: 50px;
+    background-color: #090a0a;
+    color: antiquewhite;
+    text-align: center;
+   
+    overflow: visible; /* Prevent images from being cut off */
+    
+    
+}
+
+#matchmaking h1 {
+    font-size: 60px; /* Bigger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#matchmaking h2 {
+    font-size: 100px; /* Bigger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#matchmaking p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+/* Triangle Alignment for Features */
+.triangle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.triangle-item:nth-child(1) { align-self: flex-start; }
+.triangle-item:nth-child(2) { align-self: center; }
+.triangle-item:nth-child(3) { align-self: flex-end; }
+
+.triangle-item {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.triangle-item h3 {
+    font-size: 24px;
+    color: #F88158;
+}
+
+.triangle-item p {
+    font-size: 18px;
+    color: antiquewhite;
+}
+
+
+.cta-button {
+    display: inline-block; /* Ensures the button size matches the text */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #FBBBA5, #F88158);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+}
+
+/* Centering the button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+
+/* Welcome Text Section */
+.welcome-text {
+    text-align: center;
+    color: blueviolet;
+    margin: 30px 20px;
+    font-weight: bolder;
+}
+.home-text{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+
+
+
+/* Welcome Text Section */
+/* .welcome-text {
+    text-align: center;
+    color: blueviolet;
+    margin: 30px 20px;
+    font-weight: bolder;
+}
+.home-text{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+} */
+
+/* Contact Section */
+.contact-container {
+    background-color: #070909;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    color: #FF3C3C;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background-color: #f8f8f8;
+    color: black;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #FF3C3C, #FF8A65);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #FF8A65, #FF3C3C);
+}
+
+/* Contact Info */
+.contact-info {
+    background-color: rgb(6, 5, 5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-info i {
+    color: #FF8A65;
+    margin-right: 8px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+
+.social-icons a:hover {
+    color: #FF8A65;
+}
+
+
+.about-section {
+    padding: 4rem 2rem;
+    background-color: transparent;  /* Keeps the background transparent */
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow around the section */
+}
+
+.about-section .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the content */
+    padding: 2rem; /* Optional: Adds padding inside the content */
+    border-radius: 8px; /* Optional: Adds rounded corners to the content box */
+}
+
+.about-section h3 {
+    font-size: 2.5rem;
+    color: #0e2d56;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds subtle shadow to headings */
+}
+
+.about-section h3 {
+    font-size: 2rem;
+    color: #ca4a1c;
+    margin-top: 2rem;
+    text-align: left;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Adds subtle shadow to sub-headings */
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-section strong {
+    color: #0e2d56;
+}
+
+/* Footer */
+/* Footer Styles */
+footer{
+    background:#060809;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; 
+}
+/* General styling for the team section */
+.team {
+    background-color: #050707; /* Soft background color */
+    padding: 4rem 2rem; /* Larger padding for spacing */
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Clear, readable font */
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    color: #eaf6f2; /* Dark blue for header */
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.team-facts {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left; /* Left align content for readability */
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-facts p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.team-facts h3 {
+    font-size: 1.8rem;
+    color: #0e2d56;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.team-facts ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.team-facts ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.team-facts ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: #50C878; /* Emerald Green */
+}
+
+.team-facts ul li strong {
+    color: #0e2d56; /* Highlighted text in blue */
+    font-weight: bold;
+}
+
+/* Hover effect for the list items */
+.team-facts ul li:hover {
+    background-color: #eaf6f2; /* Light green background on hover */
+    border-radius: 5px;
+    padding-left: 35px;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .team {
+        padding: 3rem 1.5rem;
+    }
+
+    .team-facts {
+        padding: 1.5rem;
+    }
+
+    .team-facts ul li {
+        font-size: 1rem;
+    }
+
+    .team-facts h3 {
+        font-size: 1.6rem;
+    }
+    .about-section {
+        padding: 3rem 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.6rem;
+    }
+}
+
+

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurrPal - Our Team</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General styling for the team section */
+        .team {
+            background-color: #090a0a; /* Soft background color */
+            padding: 4rem 2rem; /* Larger padding for spacing */
+            text-align: center;
+            font-family: 'Arial', sans-serif; /* Clear, readable font */
+        }
+
+        .team h2 {
+            font-size: 2.5rem;
+            color: #eaf6f2; /* Light blue */
+            margin-bottom: 2rem;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px #090a0a;
+        }
+
+        /* Styling for team members */
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .member {
+            color: white;
+            background-color: #e17c57;
+            padding: 15px;
+            border-radius: 12px;
+            width: 180px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* Section container styling */
+        .info-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px #090a0a(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        /* Unique backgrounds for sections */
+        .mission {
+            background-color: #090a0a; /* Dark blue */
+            color: rgb(255, 255, 255);
+        }
+
+        .vision {
+            background-color: #090a0a; /* Light green */
+            color: rgb(255, 255, 255);
+        }
+
+        .core-values {
+            background-color: #090a0a; /* Warm yellow */
+            color: rgb(255, 255, 255);
+        }
+
+        /* General styling for text inside sections */
+        .info-container h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .info-container p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .core-values ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .core-values ul li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .core-values ul li::before {
+            /* content: "✔"; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+            color: #8a4b08; /* Brown */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="images/furrpal_logo.png" alt="FurrPal Logo" />
+            </a>
+            <h1>FurrPal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="member"><img src="images/member1.jpg" alt="Member 1"><h3>Vinumi Hewa Madduma</h3></div>
+            <div class="member"><img src="images/member2.jpg" alt="Member 2"><h3>Dishen Frnando</h3></div>
+            <div class="member"><img src="images/member3.jpeg" alt="Member 3"><h3>Sesadi Keerthisinghe</h3></div>
+            <div class="member"><img src="images/member4.jpg" alt="Member 4"><h3>Dinelka Randil</h3></div>
+            <div class="member"><img src="images/member5.jpg" alt="Member 5"><h3>Anjana Rusiru</h3></div>
+            <div class="member"><img src="images/member6.jpg" alt="Member 6"><h3>Hiru Chandeepa</h3></div>
+        </div>
+    </section>
+    
+    <style>
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center aligns all members */
+            gap: 20px;
+            max-width: 800px; /* Restricts width for better alignment */
+            margin: auto; /* Centers the container */
+        }
+        
+        .member {
+            flex: 1 1 calc(33.33% - 40px); /* Each member takes one-third of the row */
+            max-width: 200px;
+            text-align: center;
+            background-color: #e17c57;
+            padding: 15px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    
+        @media (max-width: 768px) {
+            .member {
+                flex: 1 1 calc(50% - 40px); /* Two members per row on smaller screens */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .member {
+                flex: 1 1 100%; /* One member per row on mobile screens */
+            }
+        }
+    </style>
+    
+    <!-- Our Mission -->
+    <section class="info-container mission">
+        <h3> Our Mission</h3>
+        <p>At FurrPal, our mission is to connect pet lovers, enhance pet care, and build a vibrant community where every furry friend finds companionship and love. Through dog matchmaking, a supportive community forum, and a pet shop, we strive to make pet parenting easier, more enjoyable, and socially engaging.</p>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="info-container vision">
+        <h3> Our Vision</h3>
+        <p>Our vision is to improve the lives of pets and their owners by creating a platform that provides resources, connects pet owners, and helps them access the best care and services for their pets. We aim to make pet companionship more fulfilling and accessible for everyone.</p>
+    </section>
+
+    <!-- Our Core Values -->
+    <!-- <section class="info-container core-values">
+        <h3>Our Core Values</h3>
+        <ul>
+            <li><strong>Collaboration:</strong> We work together to bring ideas to life and overcome challenges.</li>
+            <li><strong>Innovation:</strong> We constantly strive to push the boundaries of technology.</li>
+            <li><strong>Care:</strong> We care deeply about the well-being of pets and owners alike.</li>
+            <li><strong>Community:</strong> Building a strong, supportive community where pet lovers thrive is our priority.</li>
+        </ul>
+    </section> -->
+
+    <footer>
+        <p>&copy; 2025 FurrPal. All rights reserved. | Powered by SDGP Group SE 17</p>
+        <p>FurrPal is dedicated to connecting pet lovers worldwide. Join our community for dog matchmaking, expert advice, and premium pet care products.</p>
+    </footer>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive team section</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<section class="team">
+		<div class="center">
+			<h1>Our Team</h1>
+		</div>
+
+		<div class="team-content">
+			<div class="box">
+				<img src="../asset/01.png">
+				<h3>Steph Jobs</h3>
+				<h5>Artist</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="../asset/02.png">
+				<h3>Steph Jobs</h3>
+				<h5>Artist</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="../asset/03.png">
+				<h3>Steph Jobs</h3>
+				<h5>Artist</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="../asset/04.png">
+				<h3>Steph Jobs</h3>
+				<h5>Artist</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+            <div class="box">
+				<img src="../asset/04.png">
+				<h3>Steph Jobs</h3>
+				<h5>Artist</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+            <div class="box">
+				<img src="../asset/04.png">
+				<h3>Steph Jobs</h3>
+				<h5>Artist</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>>
+
+    
+
+		</div>
+	</section>
+
+</body>
+</html> -->
