@@ -9,7 +9,6 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-     /* Prevent content from being hidden behind fixed header */
 }
 
 /* Header Styling */
@@ -35,9 +34,9 @@ header {
 }
 
 .logo img {
-    max-height: 100px; /* Ensuring logo size */
+    max-height: 100px;
     margin-right: 10px;
-    max-width: 100px; /* Adding some space between logo and title */
+    max-width: 100px;
 }
 
 header h1 {
@@ -77,50 +76,27 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #e14a0f; /* Emerald Green */
+    color: #e14a0f;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* JavaScript for Active Link */
-/* <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll("header nav ul li a");
-        
-        navLinks.forEach(link => {
-            link.addEventListener("click", function () {
-                navLinks.forEach(nav => nav.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-    });
-</script> */
-
-/* Responsive design: Stack the logo, h1, and nav on smaller screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack header items vertically */
-        text-align: center; /* Center-align content on small screens */
-    }
-
-    nav {
-        margin-top: 1rem; /* Add space between h1 and nav */
-        justify-content: center; /* Center nav items */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        margin-top: 1rem; /* Space between nav items */
-    }
-
-    nav ul li {
-        margin-left: 0; /* Remove left margin for vertical stack */
-        margin-bottom: 1rem; /* Space between nav items */
-    }
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
 }
 
-
-
-
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
 
 /* Home Page Video Section */
 .home-video {
@@ -130,47 +106,44 @@ header nav ul li a.active {
 }
 
 .home-video video {
-    max-width: 100%; /* Full width but still responsive */
-    height: 450px; /* Bigger height */
-    object-fit: cover; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: 450px;
+    object-fit: cover;
     border-radius: 12px;
 }
+
 .home-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
     margin-left: 35%;
     margin-top: 1%;
-    
 }
+
 img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
-.home-text-heading{
+
+.home-text-heading {
     text-align: center;
 }
 
-.home-text-heading{
-    text-align: center;
-}
 #matchmaking {
     padding: 50px;
     background-color: #090a0a;
     color: antiquewhite;
     text-align: center;
-   
-    overflow: visible; /* Prevent images from being cut off */
-    
-    
+    overflow: visible;
 }
 
 #matchmaking h1 {
-    font-size: 60px; /* Bigger font size */
+    font-size: 60px;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 #matchmaking h2 {
-    font-size: 100px; /* Bigger font size */
+    font-size: 100px;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -213,9 +186,8 @@ img:hover {
     color: antiquewhite;
 }
 
-
 .cta-button {
-    display: inline-block; /* Ensures the button size matches the text */
+    display: inline-block;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -233,14 +205,12 @@ img:hover {
     background-color: #000000;
 }
 
-/* Centering the button */
 .button-container {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 100vh; /* Full viewport height */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
 
 /* Welcome Text Section */
 .welcome-text {
@@ -249,7 +219,8 @@ img:hover {
     margin: 30px 20px;
     font-weight: bolder;
 }
-.home-text{
+
+.home-text {
     color: whitesmoke;
     text-align: center;
     margin-top: 0%;
@@ -258,25 +229,6 @@ img:hover {
     margin-right: 10%;
     text-align: justify;
 }
-
-
-
-/* Welcome Text Section */
-/* .welcome-text {
-    text-align: center;
-    color: blueviolet;
-    margin: 30px 20px;
-    font-weight: bolder;
-}
-.home-text{
-    color: whitesmoke;
-    text-align: center;
-    margin-top: 0%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: justify;
-} */
 
 /* Contact Section */
 .contact-container {
@@ -301,7 +253,6 @@ img:hover {
     margin-bottom: 20px;
 }
 
-/* Contact Form */
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
@@ -313,7 +264,7 @@ img:hover {
     font-size: 16px;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     background-color: #f8f8f8;
     color: black;
@@ -333,7 +284,6 @@ img:hover {
     background: linear-gradient(135deg, #FF8A65, #FF3C3C);
 }
 
-/* Contact Info */
 .contact-info {
     background-color: rgb(6, 5, 5);
     color: white;
@@ -357,7 +307,6 @@ img:hover {
     margin-right: 8px;
 }
 
-/* Social Icons */
 .social-icons {
     margin-top: 15px;
 }
@@ -369,18 +318,16 @@ img:hover {
     transition: color 0.3s;
 }
 
-
 .social-icons a:hover {
     color: #FF8A65;
 }
 
-
 .about-section {
     padding: 4rem 2rem;
-    background-color: transparent;  /* Keeps the background transparent */
+    background-color: transparent;
     text-align: center;
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow around the section */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .about-section .about-content {
@@ -388,9 +335,9 @@ img:hover {
     margin: 0 auto;
     text-align: left;
     line-height: 1.6;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the content */
-    padding: 2rem; /* Optional: Adds padding inside the content */
-    border-radius: 8px; /* Optional: Adds rounded corners to the content box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 .about-section h3 {
@@ -399,7 +346,7 @@ img:hover {
     margin-bottom: 1.5rem;
     text-align: left;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds subtle shadow to headings */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .about-section h3 {
@@ -407,7 +354,7 @@ img:hover {
     color: #ca4a1c;
     margin-top: 2rem;
     text-align: left;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Adds subtle shadow to sub-headings */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .about-section p {
@@ -422,28 +369,28 @@ img:hover {
 }
 
 /* Footer */
-/* Footer Styles */
-footer{
-    background:#060809;
+footer {
+    background: #060809;
     color: white;
     text-align: center;
     padding: 15px 0;
     font-size: 14px;
     font-weight: bold;
     width: 100%;
-    margin-top: auto; 
+    margin-top: auto;
 }
-/* General styling for the team section */
+
+/* Team Section */
 .team {
-    background-color: #050707; /* Soft background color */
-    padding: 4rem 2rem; /* Larger padding for spacing */
+    background-color: #050707;
+    padding: 4rem 2rem;
     text-align: center;
-    font-family: 'Arial', sans-serif; /* Clear, readable font */
+    font-family: 'Arial', sans-serif;
 }
 
 .team h2 {
     font-size: 2.5rem;
-    color: #eaf6f2; /* Dark blue for header */
+    color: #eaf6f2;
     margin-bottom: 2rem;
     font-weight: bold;
     text-align: center;
@@ -455,7 +402,7 @@ footer{
 .team-facts {
     max-width: 900px;
     margin: 0 auto;
-    text-align: left; /* Left align content for readability */
+    text-align: left;
     padding: 2rem;
     background-color: white;
     border-radius: 8px;
@@ -499,50 +446,161 @@ footer{
     left: 0;
     top: 0;
     font-size: 1.2rem;
-    color: #50C878; /* Emerald Green */
+    color: #50C878;
 }
 
 .team-facts ul li strong {
-    color: #0e2d56; /* Highlighted text in blue */
+    color: #0e2d56;
     font-weight: bold;
 }
 
-/* Hover effect for the list items */
 .team-facts ul li:hover {
-    background-color: #eaf6f2; /* Light green background on hover */
+    background-color: #eaf6f2;
     border-radius: 5px;
     padding-left: 35px;
     transition: all 0.3s ease;
 }
 
-/* Optional: Responsive design for smaller screens */
+/* Responsive Design */
 @media (max-width: 768px) {
+    /* Hamburger Menu for Mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #080a0b;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Adjust Home Section for Mobile */
+    .home-video video {
+        height: 300px;
+    }
+
+    .home-image img {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    #matchmaking h1 {
+        font-size: 40px;
+    }
+
+    #matchmaking h2 {
+        font-size: 60px;
+    }
+
+    #matchmaking p {
+        font-size: 16px;
+    }
+
+    .triangle-container {
+        flex-direction: column;
+    }
+
+    .triangle-item {
+        width: 100%;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
     .team {
-        padding: 3rem 1.5rem;
+        padding: 2rem 1rem;
     }
 
     .team-facts {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    .team-facts h3 {
+        font-size: 1.5rem;
     }
 
     .team-facts ul li {
         font-size: 1rem;
     }
+}
 
-    .team-facts h3 {
-        font-size: 1.6rem;
-    }
-    .about-section {
-        padding: 3rem 1rem;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
     }
 
-    .about-section h2 {
-        font-size: 2rem;
+    .home-video video {
+        height: 200px;
+    }
+
+    #matchmaking h1 {
+        font-size: 30px;
+    }
+
+    #matchmaking h2 {
+        font-size: 40px;
+    }
+
+    #matchmaking p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 24px;
+    }
+
+    .contact-container p {
+        font-size: 14px;
     }
 
     .about-section h3 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem;
+    }
+
+    .team h2 {
+        font-size: 2rem;
+    }
+
+    .team-facts h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-facts ul li {
+        font-size: 0.9rem;
     }
 }
-
-

@@ -6,6 +6,92 @@
     <title>Contact Us - FurrPal</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* Hamburger Menu for Mobile */
+            .hamburger {
+                display: flex;
+            }
+
+            header nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: #080a0b;
+            }
+
+            header nav ul.active {
+                display: flex;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            /* Adjust Contact Section for Mobile */
+            .contact-container {
+                padding: 20px;
+            }
+
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding: 15px;
+            }
+
+            .contact-info h3 {
+                font-size: 20px;
+            }
+
+            .contact-info p {
+                font-size: 14px;
+            }
+
+            .social-icons a {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .contact-container h2 {
+                font-size: 24px;
+            }
+
+            .contact-container p {
+                font-size: 14px;
+            }
+
+            .contact-form button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .contact-info h3 {
+                font-size: 18px;
+            }
+
+            .contact-info p {
+                font-size: 12px;
+            }
+
+            .social-icons a {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,6 +101,12 @@
             </a>
             <h1>FurrPal</h1>
         </div>
+        <!-- Hamburger Button -->
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,19 +121,19 @@
         <h2>Get in Touch with FurrPal Team</h2>
         <p class="nice" style="color: aliceblue;">Have questions or want to collaborate? Send us a message!</p>
 
-        <form class="contact-form" action="contact.php" method="post">
+        <!-- Formspree Form -->
+        <form class="contact-form" action="https://formspree.io/f/myzeezpa" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
+            <input type="hidden" name="_next" value="https://www.furrpal.info/thank-you.html">
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-        
 
         <div class="contact-info">
             <h3>Contact Details</h3>
             <p><i class="fas fa-envelope"></i> Email: furrpal07@gmail.com</p>
             <p><i class="fas fa-phone"></i> Phone: +94 70 118 8941</p>
-            
 
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -56,6 +148,12 @@
         <p>&copy; 2025 FurrPal. All rights reserved. | Powered by SDGP Group SE 17</p>
         <p>FurrPal is dedicated to connecting pet lovers worldwide. Join our community for dog matchmaking, expert advice, and premium pet care products.</p>
     </footer>
-    
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

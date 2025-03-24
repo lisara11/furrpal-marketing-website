@@ -24,26 +24,27 @@
         }
 
         .text-content {
-    width: 100%; /* Full width for proper alignment */
-    text-align: left;
-}
+            width: 100%; /* Full width for proper alignment */
+            text-align: left;
+        }
 
-.text-content h2 {
-    font-size: 38px; /* Bigger main heading */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-.text-content p{
-    font-size: 20px;
-}
-.text-content h3 {
-    font-size: 20px; /* Adjust subheading size */
-    font-weight: normal;
-    text-align: center; /* Center align the subheadings */
-    margin: 10px auto; /* Add spacing */
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
+        .text-content h2 {
+            font-size: 38px; /* Bigger main heading */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
+        .text-content p {
+            font-size: 20px;
+        }
+
+        .text-content h3 {
+            font-size: 20px; /* Adjust subheading size */
+            font-weight: normal;
+            text-align: center; /* Center align the subheadings */
+            margin: 10px auto; /* Add spacing */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
         .image-container {
             position: relative;
@@ -51,36 +52,85 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            margin-top: 30px;
         }
 
         .image-container img {
-    width: 320px; /* Same size for both images */
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
+            width: 320px; /* Same size for both images */
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
 
-/* Back Image - Slightly shifted left for visibility */
-.image-container img:first-child {
-    position: absolute;
-    opacity: 0.92; /* Keep visibility high */
-    z-index: 1;
-    right: 40px; /* Move slightly left */
-    filter: brightness(1.1) contrast(1.2);
-}
+        /* Back Image - Slightly shifted left for visibility */
+        .image-container img:first-child {
+            position: absolute;
+            opacity: 0.92; /* Keep visibility high */
+            z-index: 1;
+            right: 40px; /* Move slightly left */
+            filter: brightness(1.1) contrast(1.2);
+        }
 
-/* Front Image - Slightly shifted right */
-.image-container img:last-child {
-    position: relative;
-    z-index: 2;
-    right: -160px; /* Minimal overlap */
-}
-
+        /* Front Image - Slightly shifted right */
+        .image-container img:last-child {
+            position: relative;
+            z-index: 2;
+            right: -160px; /* Minimal overlap */
+        }
 
         /* Ensure text is not too close to images */
-        .text-content h2, 
+        .text-content h2,
         .text-content p {
             margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .matchmaking-container {
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .text-content {
+                text-align: center;
+            }
+
+            .image-container {
+                width: 100%;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .image-container img:first-child {
+                right: 20px;
+            }
+
+            .image-container img:last-child {
+                right: -80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-content h2 {
+                font-size: 28px;
+            }
+
+            .text-content p {
+                font-size: 16px;
+            }
+
+            .text-content h3 {
+                font-size: 16px;
+            }
+
+            .image-container img {
+                width: 250px;
+            }
+
+            .image-container img:last-child {
+                right: -60px;
+            }
         }
     </style>
 </head>
@@ -92,6 +142,12 @@
             </a>
             <h1>FurrPal</h1>
         </div>
+        <!-- Hamburger Button -->
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -101,28 +157,35 @@
             </ul>
         </nav>
     </header>
-    
+
     <section class="matchmaking-container">
         <div class="text-content">
-            <h2 >Find the Perfect Match for Your Dog! </h2>
+            <h2>Find the Perfect Match for Your Dog!</h2>
             <p>
-                Looking for a companion for your furry friend? <strong>FurrPal’s Dog Matchmaking</strong> feature helps you find the 
-                perfect match </strong>.
+                Looking for a companion for your furry friend? <strong>FurrPal’s Dog Matchmaking</strong> feature helps you find the
+                perfect match.
             </p>
             <h3>Smart Matching</h3>
             <h3>Filter-Based Search</h3>
             <h3>Connect with Pet Owners</h3>
         </div>
-        
+
         <div class="image-container">
             <img src="images/dog2.png" alt="Back Image">
             <img src="images/dog1.png" alt="Front Image">
         </div>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 FurrPal. All rights reserved. | Powered by SDGP Group SE 17</p>
         <p>FurrPal is dedicated to connecting pet lovers worldwide. Join our community for dog matchmaking, expert advice, and premium pet care products.</p>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
 </body>
-</html> 
+</html>
